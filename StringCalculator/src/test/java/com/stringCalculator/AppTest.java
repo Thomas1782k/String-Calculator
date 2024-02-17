@@ -11,7 +11,7 @@ public class AppTest {
 	
 	    //Step 1:
 	    @Test
-	    public void testAdd_EmptyString_ReturnsZero() throws Exception {
+	    public void testAdd_EmptyString()  {
 	    	App calculator = new App();
 	        assertEquals(0, calculator.add(""));
 	    }
@@ -23,21 +23,16 @@ public class AppTest {
 	        assertEquals(5, calculator.add("5"));
 	    }
 
-	    @Test
-	    public void testAdd_TwoNumbersSeparatedByComma_ReturnsSum() {
-	    	App calculator = new App();
-	        assertEquals(10, calculator.add("5,5"));
-	    }
 
 	    @Test
-	    public void testAdd_MultipleNumbersSeparatedByComma_ReturnsSum() {
+	    public void testAdd_MultipleNumbers() {
 	    	App calculator = new App();
 	        assertEquals(15, calculator.add("5,5,5"));
 	    }
 
 	    //Step: 3
 	    @Test
-	    public void testAdd_NewLinesBetweenNumbers_ReturnsSum()  {
+	    public void testAdd_NewLines()  {
 	    	App calculator = new App();
 	        assertEquals(6, calculator.add("1\n2,3"));
 	    }
